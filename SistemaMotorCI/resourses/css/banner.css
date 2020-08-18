@@ -1,0 +1,38 @@
+.sci_cont_banner{
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #9b9b9b;
+}
+
+.sci_sombra {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin: auto;
+}
+
+.sci_sombra hr {
+  border-top: 1px solid #fff;
+}
+
+.sci_sombra_diagram {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  padding: 150px;
+  width: 80%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin: auto;
+}

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Federo", sans-serif;
+}
+
+.sci_navbar {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.sci_navbar nav {
+  background-color: transparent !important;
+}
+
+#fuel_indicator {
+  position: relative;
+  height: 30px;
+  background-color: brown;
+}

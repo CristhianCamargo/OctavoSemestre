@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotorCI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Federo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./resourses/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./resourses/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="./resourses/css/banner.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav class="sci_navbar navbar-dark bg-dark">
+        <h1>Sistema de Combustion Interna</h1>
+      </nav>
+    </header>
+    <section class="diagrama">
+      <div>
+        <div class="sci_sombra_diagram">
+          <h1>Proceso</h1>
+          <hr />
+          <div>
+            <button
+              type="button"
+              class="btn_meter_llave btn-default btn-lg"
+              id="btn_meter_llave"
+              disabled="disabled"
+            >
+              MeterLlave
+            </button>
+            <button
+              type="button"
+              class="btn_Girar_Llave btn-default btn-lg"
+              id="btn_Girar_Llave"
+              disabled="disabled"
+            >
+              GirarLlave
+            </button>
+            <button
+              type="button"
+              class="btn_start btn-default btn-lg"
+              id="btn_start"
+              disabled="disabled"
+            >
+              Arranque
+            </button>
+            <button
+              type="button"
+              class="btn_admission btn-default btn-lg"
+              id="btn_admission"
+              disabled="disabled"
+            >
+              Admision
+            </button>
+            <button
+              type="button"
+              class="btn_compression btn-default btn-lg"
+              id="btn_compression"
+              disabled="disabled"
+            >
+              Compresion
+            </button>
+            <button
+              type="button"
+              class="btn_explosion btn-default btn-lg"
+              id="btn_explosion"
+              disabled="disabled"
+            >
+              Explosion
+            </button>
+            <button
+              type="button"
+              class="btn_escape btn-default btn-lg"
+              id="btn_scape"
+              disabled="disabled"
+            >
+              Escape
+            </button>
+          </div>
+          <hr />
+          <div class="progress">
+            <div
+              class="progress-bar"
+              id="fuel_indicator"
+              role="progressbar"
+              style="width: 100%;"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ordenes" id="ordenes">
+      <div class="sci_cont_banner">
+        <div class="sci_sombra">
+          <h1>Opciones</h1>
+          <hr />
+          <div>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input type="radio" id="meter_llave" checked /> MeterLlave
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" id="girar_llave" /> GirarLlave
+              </label>
+            </div>
+            <span class="badge badge-pill" id="on_indicator">Encendido</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="resourses/vendor/bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="resourses/js/main.js"></script>
+    <script src="resourses/js/times.js"></script>
+    <script src="resourses/vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
