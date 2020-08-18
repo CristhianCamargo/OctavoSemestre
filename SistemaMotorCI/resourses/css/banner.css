@@ -1,4 +1,4 @@
-.sci_cont_banner{
+.sci_cont_banner {
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -10,7 +10,7 @@
 .sci_sombra {
   position: absolute;
   left: 50%;
-  top: 85%;
+  top: 90%;
   transform: translate(-50%, -50%);
   padding: 20px;
   width: 80%;

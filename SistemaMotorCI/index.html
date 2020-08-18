@@ -17,14 +17,16 @@
   </head>
   <body>
     <header>
-      <nav class="sci_navbar navbar-dark bg-dark">
+      <!-- <nav class="sci_navbar navbar-dark bg-dark">
         <h1>Sistema de Combustion Interna</h1>
-      </nav>
+      </nav> -->
     </header>
     <section class="diagrama">
       <div>
         <div class="sci_sombra_diagram">
-          <h1>Proceso</h1>
+          <h1>Sistema de combustion interna</h1>
+          <hr />
+          <h2>Proceso</h2>
           <hr />
           <div>
             <button
@@ -38,7 +40,7 @@
             <button
               type="button"
               class="btn_Girar_Llave btn-default btn-lg"
-              id="btn_Girar_Llave"
+              id="btn_girar_glave"
               disabled="disabled"
             >
               GirarLlave
@@ -85,12 +87,12 @@
             </button>
           </div>
           <hr />
+          <h3>Combustible</h3>
           <div class="progress">
             <div
               class="progress-bar"
               id="fuel_indicator"
               role="progressbar"
-              style="width: 100%;"
               aria-valuenow="0"
               aria-valuemin="0"
               aria-valuemax="100"
@@ -107,7 +109,8 @@
           <div>
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary">
-                <input type="radio" id="meter_llave" checked /> MeterLlave
+                <input type="radio" id="meter_llave" checked /> Meter/Sacar
+                llave
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" id="girar_llave" /> GirarLlave

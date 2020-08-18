@@ -11,7 +11,7 @@ let consume = 0;
 /**
  * Cambia el estado del swicth.
  * (Con llave o sin llave)
- * @returns {entry Boolean} True para llave en el switch, false llave
+ * @returns {Boolean} True para llave en el switch, false para llave
  * fuera del switch
  */
 const putKey = () => {
@@ -19,7 +19,9 @@ const putKey = () => {
 };
 
 /**
- *
+ *Verifica el estado del switch
+ *@return {Boolean}True para llave en el switch, false para llave
+ *fuera del switch
  */
 const validateKey = () => {
   if (!entry && keyPos == false) {
@@ -35,18 +37,21 @@ $("#meter_llave").on("click", function () {
   validateKey();
 });
 
+/**
+ * Girar la llave en ambos sentidos, tanto para encender el motor como apagarlo.
+ */
 const turnKey = () => {
   if (validateKey()) {
     if (!keyPos) {
       keyPos = true;
-      document.getElementById("btn_Girar_Llave").style.backgroundColor =
+      document.getElementById("btn_girar_glave").style.backgroundColor =
         "green";
-      restart();
+      start();
     } else {
       keyPos = false;
-      document.getElementById("btn_Girar_Llave").style.backgroundColor = "grey";
+      document.getElementById("btn_girar_glave").style.backgroundColor = "grey";
+      document.getElementById("btn_start").style.backgroundColor = "grey";
     }
-    start();
   } else {
     alert("La llave no esta en el switch");
   }
@@ -56,16 +61,20 @@ $("#girar_llave").on("click", function () {
   turnKey();
 });
 
+/**
+ * Ejecuta el proceso de arranque del motor.
+ */
 const start = () => {
   if (keyPos) {
     document.getElementById("btn_start").style.backgroundColor = "green";
     document.getElementById("on_indicator").style.backgroundColor = "green";
-  } else {
-    document.getElementById("btn_start").style.backgroundColor = "grey";
+    combustion();
   }
-  combustion();
 };
 
+/**
+ * Proceso del ciclo del pistón teniendo en cuenta el combustible disponible.
+ */
 const combustion = async () => {
   // await sleep(400);
 
@@ -78,13 +87,11 @@ const combustion = async () => {
           if (!admValve) {
             admission(fuel, consume);
           }
+        } else if (admValve) {
+          compression();
+          explosion();
         } else {
-          if (admValve) {
-            compression();
-            explosion();
-          } else {
-            scape();
-          }
+          scape();
         }
       }
     }
@@ -92,6 +99,7 @@ const combustion = async () => {
     restart();
     if (!keyPos) {
       document.getElementById("on_indicator").style.backgroundColor = "red";
+      document.getElementById("btn_start").style.backgroundColor = "grey";
       break;
     }
     if (consume == fuel - 1) {
